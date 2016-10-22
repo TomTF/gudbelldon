@@ -1,0 +1,102 @@
+﻿body {
+  background-color: #F6F4F1 !important;
+}
+nav {
+  background-color: #94C068 !important;
+  font-family: 'Short Stack';
+}
+.content-wrapper {
+  padding-top: 50px;
+}
+.content-wrapper .section {
+  padding: 50px 0;
+  box-shadow: #ffffff 5px 5px 5px;
+}
+.card .card-action a {
+  color: #94C068 !important;
+}
+.highlight-text {
+  color: #445060;
+}
+.fixed-bottom-right {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+}
+.impressum-link {
+  font-size: 10px;
+}
+#open-hours-dropdown {
+  background-color: #8DAAD6;
+  line-height: 27px;
+  padding: 10px;
+  width: 330px !important;
+  font-size: 14px !important;
+}
+#open-hours-dropdown td {
+  padding: 0 5px;
+}
+.navbar-fixed {
+  height: 0 !important;
+}
+.nav-open-hours {
+  bottom: 66px;
+  color: #445060;
+  position: absolute;
+  line-height: 27px;
+}
+.nav-open-hours td {
+  padding: 0 5px;
+}
+.contact-details a {
+  color: #445060;
+  margin-left: 10px;
+}
+.contact-details .phone-icon {
+  color: #E8A355;
+}
+.contact-details .mail-icon {
+  color: #8DAAD6;
+}
+#contact-form label.error {
+  text-align: right;
+  display: inline-block;
+  position: absolute;
+  right: 14px;
+  color: #D7422A;
+}
+.contact-container {
+  position: relative;
+  background-color: rgba(246, 244, 241, 0.8);
+  padding: 10px;
+}
+.contact-container:not(:first-child) {
+  margin-top: 10px;
+}
+.contact-map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+}
+#open-hours-dropdown a,
+#mobile-nav a {
+  display: inline !important;
+  line-height: normal !important;
+}
+/*.side-nav{
+    width: 260px !important;
+}*/
+#sectionEvents {
+  background-image: url(Images/HG_Workshop.jpg);
+}
+#events {
+  background: rgba(238, 161, 89, 0.3);
+}
+#contact {
+  background: rgba(98, 193, 201, 0.3);
+}
+#home {
+  padding: 200px 0;
+}

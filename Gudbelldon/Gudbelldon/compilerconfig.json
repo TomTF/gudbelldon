@@ -1,0 +1,18 @@
+﻿[
+  {
+    "outputFile": "Content/Site.css",
+    "inputFile": "Content/Site.less"
+  },
+  {
+    "outputFile": "Content/materialize.css",
+    "inputFile": "Content/materialize.scss"
+  },
+  {
+    "outputFile": "Content/components/_buttons.css",
+    "inputFile": "Content/components/_buttons.scss"
+  },
+  {
+    "outputFile": "Content/components/date_picker/_default.date.css",
+    "inputFile": "Content/components/date_picker/_default.date.scss"
+  }
+]

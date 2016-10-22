@@ -1,0 +1,133 @@
+﻿@model HomeModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Short+Stack' rel='stylesheet' type='text/css'>
+    <link rel="apple-touch-icon" sizes="57x57" href="Content/Favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="Content/Favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="Content/Favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="Content/Favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="Content/Favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="Content/Favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="Content/Favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="Content/Favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="Content/Favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="Content/Favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="Content/Favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="Content/Favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="Content/Favicon/favicon-16x16.png">
+    <link rel="manifest" href="Content/Favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="Content/Favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
+    
+    <title>Gudbelldon</title>
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+
+    <!-- Dropdown Structure -->
+    <div id="open-hours-dropdown" class="dropdown-content">
+        <table>
+            <tr>
+                <td>Do, Fr, Sa</td>
+                <td>08:30 - 11:30</td>
+            </tr>
+            <tr>
+                <td>Fr</td>
+                <td>15:00 - 18:00</td>
+            </tr>
+            <tr>
+                <td colspan="2">oder auf Anfrage</td>
+            </tr>
+            <tr>
+                <td colspan="2">Tel. Nr.: <a href="tel:004366475078435">0664 7507 8435</a></td>
+            </tr>
+            <tr>
+                <td colspan="2"><small>Sommerferien: 18.7. - 30.7.</small></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper container">
+                <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul id="nav-mobile" class="navigation left hide-on-med-and-down">
+                    <li data-menuanchor="home"><a class="waves-effect" href="#home">Gudbelldon</a></li>
+                    <li data-menuanchor="events"><a class="waves-effect" href="#events">Veranstaltungen</a></li>
+                    <li data-menuanchor="gallery"><a class="waves-effect" href="#gallery">Gallerie</a></li>
+                    <li data-menuanchor="contact"><a class="waves-effect" href="#contact">Kontakt</a></li>
+                </ul>
+                <ul id="nav-mobile" class="navigation right hide-on-med-and-down">
+                    <li><a class="dropdown-button" href="#!" data-activates="open-hours-dropdown">Öffnungszeiten<i class="material-icons right">arrow_drop_down</i></a></li>
+                </ul>
+                <ul id="mobile-nav" class="navigation side-nav">
+                    <li data-menuanchor="home"><a class="waves-effect" href="#home">Gudbelldon</a></li>
+                    <li data-menuanchor="events"><a class="waves-effect" href="#events">Veranstaltungen</a></li>
+                    <li data-menuanchor="gallery"><a class="waves-effect" href="#gallery">Gallerie</a></li>
+                    <li data-menuanchor="contact"><a class="waves-effect" href="#contact">Kontakt</a></li>
+                    <li class="nav-open-hours">
+                        <table>
+                            <tr>
+                                <td>Do, Fr, Sa</td>
+                                <td>08:30 - 11:30</td>
+                            </tr>
+                            <tr>
+                                <td>Fr</td>
+                                <td>15:00 - 18:00</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">oder auf Anfrage</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">Tel. Nr.: <a href="tel:004366475078435">0664 7507 8435</a></td>
+                            </tr>                            
+                        </table>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+
+    <div class="content-wrapper">
+        <div class="section" id="home">
+            @Html.Partial("_Start")
+        </div>
+        <div class="section" id="events">
+            @Html.Partial("_Events")
+        </div>
+        <div class="section" id="gallery">
+            @Html.Partial("_Gallery")
+        </div>
+        <div class="section" id="contact">
+            @Html.Partial("_Contact")
+        </div>
+    </div>
+
+    <a class="fixed-bottom-right modal-trigger" href="#impressumModal">Impressum</a>
+    @Html.Partial("_Impressum")
+
+    @Scripts.Render("~/bundles/sitebundle")
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> 
+
+    <script>
+        $(document).ready(function () {
+            $(".button-collapse").sideNav();
+            $('.modal-trigger').leanModal();
+            new Bricklayer(document.getElementById("bricklayer"))
+        });
+
+        //$('#fullpage').fullpage({
+        //    menu: '.navigation',
+        //    anchors: ['home', 'events', 'gallery', 'contact'],
+        //    //sectionsColor: ['', '', '#A47460', '', '']
+        //});
+    </script>
+</body>
+
+</html>

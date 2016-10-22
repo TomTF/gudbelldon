@@ -1,0 +1,139 @@
+﻿@background-color: #F6F4F1;
+@background-color-accent: white;
+@green: #94C068;
+@orange: #E8A355;
+@yellow: #F0C741;
+@violet: #CB80AE;
+@blue: #8DAAD6;
+@red: #D7422A;
+@aqua: #69BFC9;
+@black: #445060;
+
+body {
+    background-color: @background-color !important;
+}
+
+nav {
+    background-color: @green !important;
+    font-family: 'Short Stack';
+}
+
+.content-wrapper {
+    padding-top: 50px;
+
+    .section {
+        padding: 50px 0;
+        box-shadow: rgba(255,255,255,1) 5px 5px 5px;
+    }
+}
+
+.card .card-action a {
+    color: @green !important;
+}
+
+.highlight-text {
+    color: @black;
+}
+
+.fixed-bottom-right {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+}
+
+.impressum-link {
+    font-size: 10px;
+}
+
+#open-hours-dropdown {
+    background-color: @blue;
+    line-height: 27px;
+    padding: 10px;
+    width: 330px !important;
+    font-size: 14px !important;
+}
+
+#open-hours-dropdown td {
+    padding: 0 5px;
+}
+
+.navbar-fixed {
+    height: 0 !important;
+}
+
+
+.nav-open-hours {
+    bottom: 66px;
+    color: @black;
+    position: absolute;
+    line-height: 27px;
+}
+
+.nav-open-hours td {
+    padding: 0 5px;
+}
+
+.contact-details a {
+    color: @black;
+    margin-left: 10px;
+}
+
+.contact-details .phone-icon {
+    color: @orange;
+}
+
+.contact-details .mail-icon {
+    color: @blue;
+}
+
+#contact-form label.error {
+    text-align: right;
+    display: inline-block;
+    position: absolute;
+    right: 14px;
+    color: @red;
+}
+
+.contact-container {
+    position: relative;
+    background-color: rgba(246, 244, 241, 0.8);
+    padding: 10px;
+}
+
+.contact-container:not(:first-child) {
+    margin-top: 10px;
+}
+
+.contact-map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+}
+
+#open-hours-dropdown a, #mobile-nav a {
+    display: inline !important;
+    line-height: normal !important;
+}
+
+/*.side-nav{
+    width: 260px !important;
+}*/
+
+
+#sectionEvents {
+    background-image: url(Images/HG_Workshop.jpg);
+}
+
+#events {
+    background: rgba(238,161,89,0.3);
+}
+
+#contact{
+    background: rgba(98,193,201,0.30); 
+}
+
+#home{
+    padding: 200px 0;
+}

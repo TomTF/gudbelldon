@@ -1,0 +1,15 @@
+﻿@model HomeModel
+
+@*@foreach (var image in Model.Images) {
+        <img src="@image.PhotoUrl" />
+
+    }*@
+
+<div class="container">
+    <div class="fotorama" data-width="100%" data-height="90%" data-nav="thumbs">
+        @foreach (var image in Model.Images)
+        {
+            <a href="@image.ThumbnailUrl"><img src="@image.PhotoUrl"></a>
+        }
+    </div>
+</div>
