@@ -11,5 +11,6 @@ namespace Gudbelldon.Models
     {
         public IEnumerable<Photo> Images { get; set; }
         public IEnumerable<EventModel> Events { get; set; }
+        public IEnumerable<DateTime> KnittingDates { get; set; }
     }
 }

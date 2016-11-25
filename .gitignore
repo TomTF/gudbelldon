@@ -251,3 +251,4 @@ paket-files/
 .idea/
 *.sln.iml
 /Gudbelldon/FbTest/App.config
+/Gudbelldon/Gudbelldon/Web.config

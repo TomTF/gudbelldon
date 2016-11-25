@@ -26,6 +26,8 @@
     
     <title>Gudbelldon</title>
     @Styles.Render("~/Content/css")
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
 
@@ -33,7 +35,7 @@
     <div id="open-hours-dropdown" class="dropdown-content">
         <table>
             <tr>
-                <td>Do, Fr, Sa</td>
+                <td>Mo*, Do, Fr, Sa</td>
                 <td>08:30 - 11:30</td>
             </tr>
             <tr>
@@ -47,7 +49,7 @@
                 <td colspan="2">Tel. Nr.: <a href="tel:004366475078435">0664 7507 8435</a></td>
             </tr>
             <tr>
-                <td colspan="2"><small>Sommerferien: 18.7. - 30.7.</small></td>
+                <td colspan="2"><small>* Herbst/Winter 2016/2017</small></td>
             </tr>
         </table>
     </div>
@@ -58,7 +60,8 @@
                 <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul id="nav-mobile" class="navigation left hide-on-med-and-down">
                     <li data-menuanchor="home"><a class="waves-effect" href="#home">Gudbelldon</a></li>
-                    <li data-menuanchor="events"><a class="waves-effect" href="#events">Veranstaltungen</a></li>
+                    <li data-menuanchor="events"><a class="waves-effect" href="#events">Strickabendtermine</a></li>
+                    <li data-menuanchor="workshops"><a class="waves-effect" href="#workshops">Kurse</a></li>
                     <li data-menuanchor="gallery"><a class="waves-effect" href="#gallery">Gallerie</a></li>
                     <li data-menuanchor="contact"><a class="waves-effect" href="#contact">Kontakt</a></li>
                 </ul>
@@ -100,6 +103,9 @@
         </div>
         <div class="section" id="events">
             @Html.Partial("_Events")
+        </div>
+        <div class="section" id="workshops">
+            @Html.Partial("_Workshops")
         </div>
         <div class="section" id="gallery">
             @Html.Partial("_Gallery")
