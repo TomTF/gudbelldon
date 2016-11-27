@@ -7,6 +7,7 @@ using System.Net.Mail;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using Gudbelldon.Data.Model;
 using Gudbelldon.Facebook;
 using Gudbelldon.Models;
 
@@ -20,10 +21,7 @@ namespace Gudbelldon.Controllers
             var model = new HomeModel
             {
                 Images = await photoProvider.GetPhotoLinks(),
-                Events = new List<EventModel> {
-                    new EventModel("Content/Images/Events/20160926.png", "Strickerisch für Anfänger", null,
-                    "Für all jene, die schon immer \"losnadeln\" wollten, aber nicht wussten  WIE? In diesem Kurs geht es ganz simpel ums Anschlagen, glatt und verkehrt stricken und zu guter Letzt wieder ums Abketten. Am Ende nähen wir unser \"Musterfleckerl\" mit ein paar Stichen händisch zusammen und schwuppdiwupp: der Gästepatschen ist fertig und kann noch umhäkelt werden. Kursbeitrag: € 5,-/Abend (ca. 3h) + Material", new DateTime(2016,9,26), new TimeSpan(18,30,0), new TimeSpan(21,0,0)),
-
+                Events = new List<Event> {
                     //new EventModel("Content/Images/Events/20161003.png", "Franz. Handschuhe", "Teil 1", "Etwas Strickerfahrung erlaubt :) Wir stricken zwar kraus rechts, aber mit dünner Wolle und ebenso dünnen Nadeln (etwa Stärke 2,5 – 3: können mitgebracht werden!). Am ersten Abend stricken wir den Oberteil des Handschuhs, dann wird es eine kleine Hausübung geben bis zum zweiten Abend, an dem wir dann den Daumenkeil in Angriff nehmen. Eventuell kommt zum Zusammenhäkeln der Teile ein dritter Abend zustande. Kursbeitrag: € 5,-/Abend (etwa 3h) + Material", new DateTime(2016,10,3), new TimeSpan(18,30,0), new TimeSpan(21,0,0)),
                     //new EventModel("Content/Images/Events/20161010.png", "Franz. Handschuhe", "Teil 2", "Etwas Strickerfahrung erlaubt :) Wir stricken zwar kraus rechts, aber mit dünner Wolle und ebenso dünnen Nadeln (etwa Stärke 2,5 – 3: können mitgebracht werden!). Am ersten Abend stricken wir den Oberteil des Handschuhs, dann wird es eine kleine Hausübung geben bis zum zweiten Abend, an dem wir dann den Daumenkeil in Angriff nehmen. Eventuell kommt zum Zusammenhäkeln der Teile ein dritter Abend zustande. Kursbeitrag: € 5,-/Abend (etwa 3h) + Material", new DateTime(2016,10,10), new TimeSpan(18,30,0), new TimeSpan(21,0,0)),
                     //new EventModel(null, "Spinn`di aus", "Spinnen für Anfänger und Fortgeschrittene", "Wir entlassen niemand ohne Faden :). Kursbeitrag: € 55,- All Inclusive (auch Spinnrad).(nach Absprache kann auch das eigene Spinnrad mitgenommen werden!)", new DateTime(2016,10,22), new TimeSpan(14,0,0), new TimeSpan(17,0,0)),
@@ -35,22 +33,23 @@ namespace Gudbelldon.Controllers
                     //new EventModel(null, "Entrelac/Stricken im Flechtmuster", "Teil 2", null, new DateTime(2016,11,14), new TimeSpan(18,30,0), new TimeSpan(21,0,0)),
                     //new EventModel(null, "3. Sockennachmittag", "Fragen zur Socke von A - Z", "Du willst deinen ersten eigenen Socken stricken oder hast eine spezifische Frage mitten in der Ferse? Hier bist du richtig und bekommst hoffentlich auf alles eine Antwort und eine Tasse Kaffee :). Beitrag pro Nachmittag: € 5,-", new DateTime(2016,11,18), new TimeSpan(15,0,0), null),
                     //new EventModel("Content/Images/Events/20161122.png", "Strickerisch für Anfänger", null, null, new DateTime(2016,11,22), new TimeSpan(18,30,0), new TimeSpan(21,0,0)),
-                    new EventModel(null, "Glücksbringer häkeln/Amigurumi", null, null, new DateTime(2016,12,29), new TimeSpan(8,30,0), new TimeSpan(11,30,0)),
-                    new EventModel("Content/Images/Events/haube.jpg", "Strick deine Haube!", null, null, new DateTime(2016,12,12), new TimeSpan(18,30,0), null),
-                    new EventModel("Content/Images/Events/Child.jpg", "Mama-Kinder-Kurs", "Armstricken mit Alpaka-Merino-Wolle", null, new DateTime(2016,12,12), new TimeSpan(18,30,0), null),
+                    new Event(null, "Glücksbringer häkeln/Amigurumi", null, null, new DateTime(2016,12,29), new TimeSpan(8,30,0), new TimeSpan(11,30,0)),
+                    new Event("Content/Images/Events/filzpatschen.jpg", "Filzpatschenkurs!", null, null, new DateTime(2016,12,5), new TimeSpan(18,30,0), null),
+                    new Event("Content/Images/Events/haube.jpg", "Strick deine Haube!", null, null, new DateTime(2016,12,12), new TimeSpan(18,30,0), null),
+                    new Event("Content/Images/Events/Child.jpg", "Mama-Kinder-Kurs", "Armstricken mit Alpaka-Merino-Wolle", null, new DateTime(2017,1,3), new TimeSpan(9,0,0), new TimeSpan(11,0,0)),
                 }.Where(e => e.Date > DateTime.Now.AddDays(-1)).OrderBy(e => e.Date),
-                KnittingDates = new List<DateTime> {
-                    new DateTime(2016,11,21),
-                    new DateTime(2016,11,28),
-                    new DateTime(2016,12,13),
-                    new DateTime(2017,1,10),
-                    new DateTime(2017,1,17),
-                    new DateTime(2017,1,24),
-                    new DateTime(2017,1,31),
-                    new DateTime(2017,2,7),
-                    new DateTime(2017,2,14),
-                    new DateTime(2017,2,28)
-                }.OrderBy(d => d)
+                KnittingDates = new List<KnittingNight> {
+                    new KnittingNight(new DateTime(2016,11,21)),
+                    new KnittingNight(new DateTime(2016,11,28)),
+                    new KnittingNight(new DateTime(2016,12,13)),
+                    new KnittingNight(new DateTime(2017,1,10)),
+                    new KnittingNight(new DateTime(2017,1,17)),
+                    new KnittingNight(new DateTime(2017,1,24)),
+                    new KnittingNight(new DateTime(2017,1,31)),
+                    new KnittingNight(new DateTime(2017,2,7)),
+                    new KnittingNight(new DateTime(2017,2,14)),
+                    new KnittingNight(new DateTime(2017,2,28))
+                }.OrderBy(d => d.Date)
             };
             return View(model);
         }

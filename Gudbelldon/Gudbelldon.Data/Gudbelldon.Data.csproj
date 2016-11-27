@@ -55,16 +55,34 @@
     <Compile Include="Migrations\201601071039515_InitialCreate.Designer.cs">
       <DependentUpon>201601071039515_InitialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611252110212_Users.cs" />
+    <Compile Include="Migrations\201611252110212_Users.Designer.cs">
+      <DependentUpon>201611252110212_Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611252202003_Events.cs" />
+    <Compile Include="Migrations\201611252202003_Events.Designer.cs">
+      <DependentUpon>201611252202003_Events.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\Event.cs" />
+    <Compile Include="Model\KnittingNight.cs" />
     <Compile Include="Model\OpeningHour.cs" />
+    <Compile Include="Model\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201601071039515_InitialCreate.resx">
       <DependentUpon>201601071039515_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611252110212_Users.resx">
+      <DependentUpon>201611252110212_Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611252202003_Events.resx">
+      <DependentUpon>201611252202003_Events.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

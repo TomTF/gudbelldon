@@ -16,7 +16,7 @@ namespace Gudbelldon
                         "~/Scripts/jquery.fullPage.min.js",
                         "~/Scripts/Site/contactMe.js",
                         "~/Scripts/bricklayer.min.js",
-                        "~/Scripts/modernizr-*"));   
+                        "~/Scripts/modernizr-*"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/Site.css",
@@ -24,6 +24,17 @@ namespace Gudbelldon
                       "~/Content/bricklayer.min.css",
                       "~/Content/jquery.fullPage.css",
                       "~/Content/animate.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/admin-vendor-scripts").Include(
+                "~/Scripts/jquery-{version}.js",
+                "~/Scripts/jquery.validate.min.js",
+                "~/Scripts/jquery.validate.messages_de.js",
+                "~/Scripts/materialize.min.js",
+                "~/Scripts/modernizr-*"));
+
+            bundles.Add(new StyleBundle("~/bundles/admin-vendor-styles").Include(
+                "~/Content/materialize.min.css"));
+
         }
     }
 }

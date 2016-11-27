@@ -122,17 +122,20 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdministrationController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ContactModel.cs" />
-    <Compile Include="Models\EventModel.cs" />
     <Compile Include="Models\HomeModel.cs" />
+    <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\animate.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bricklayer.min.css" />
     <Content Include="Content\Favicon\android-icon-144x144.png" />
     <Content Include="Content\Favicon\android-icon-192x192.png" />
@@ -166,6 +169,7 @@
     <Content Include="Content\Images\Events\20161024.png" />
     <Content Include="Content\Images\Events\20161122.png" />
     <Content Include="Content\Images\Events\child.jpg" />
+    <Content Include="Content\Images\Events\filzpatschen.jpg" />
     <Content Include="Content\Images\Events\haube.jpg" />
     <Content Include="Content\Images\Haube-orange.png" />
     <Content Include="Content\Images\HG_Workshop.jpg" />
@@ -190,6 +194,7 @@
     <Content Include="Content\Site.min.css">
       <DependentUpon>Site.css</DependentUpon>
     </Content>
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="font\material-design-icons\LICENSE.txt" />
     <Content Include="font\material-design-icons\Material-Design-Icons.svg" />
     <Content Include="Global.asax" />
@@ -252,9 +257,18 @@
     <Content Include="Content\components\_variables.scss" />
     <Content Include="Content\components\_waves.scss" />
     <Content Include="Content\Favicon\manifest.json" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="Properties\PublishProfiles\Default Settings.pubxml" />
     <None Include="Properties\PublishProfiles\Disk.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\bricklayer.min.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
@@ -285,6 +299,10 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Views\Home\_Events.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Administration\Login.cshtml" />
+    <Content Include="Views\Administration\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
       <SubType>Designer</SubType>

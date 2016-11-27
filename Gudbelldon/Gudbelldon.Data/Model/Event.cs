@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Gudbelldon.Models
+namespace Gudbelldon.Data.Model
 {
-    public class EventModel
+    public class Event
     {
+        public int EventId { get; set; }
         public string ImageUrl { get; set; }
         public string Title { get; set; }
         public string Subtitle { get; set; }
@@ -15,12 +16,12 @@ namespace Gudbelldon.Models
         public TimeSpan Start { get; set; }
         public TimeSpan? End { get; set; }
 
-        public EventModel()
+        public Event()
         {
 
         }
 
-        public EventModel(string imageUrl, string title, string subtitle, string description, DateTime date, TimeSpan start, TimeSpan? end)
+        public Event(string imageUrl, string title, string subtitle, string description, DateTime date, TimeSpan start, TimeSpan? end)
         {
             this.ImageUrl = imageUrl;
             this.Title = title;
