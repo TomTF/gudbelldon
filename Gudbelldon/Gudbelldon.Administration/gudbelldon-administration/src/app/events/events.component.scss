@@ -1,0 +1,32 @@
+md-card{
+    margin-top: 10px;
+}
+
+/deep/ md-input{
+     .md-input-underline{
+        border-color: transparent;
+     }
+
+     .md-input-wrapper{
+        margin: 0 0 16px 0;         
+     }
+}
+
+md-card-actions{
+    min-height: 44px;
+    position: relative;
+    overflow: hidden;
+
+    button{
+        position: absolute;
+        right: 10px;
+    }
+}
+
+
+
+.add-button-container{
+    position: fixed;
+    bottom: 20px;
+    left: calc(50% - 27px);
+}

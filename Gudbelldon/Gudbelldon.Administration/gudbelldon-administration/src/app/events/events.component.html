@@ -1,0 +1,31 @@
+<div>
+  <div class="events-container">
+    <md-card *ngFor="let event of events">
+      <md-card-title-group>
+        <img md-card-sm-image src="{{event.imageUrl}}" />
+        <md-card-title>
+          <md-input [(ngModel)]="event.title"></md-input>
+        </md-card-title>
+        <md-card-subtitle>
+          <md-input [(ngModel)]="event.subtitle"></md-input>
+        </md-card-subtitle>
+      </md-card-title-group>
+      <md-card-content>        
+        <p>Datum: {{event.date | date:"EEE dd.MM.yyyy"}}</p>
+        <p>Begin: {{event.start}}</p>
+        <p>Ende: {{event.end}}</p>
+      </md-card-content>
+      <md-card-actions>
+        <button md-mini-fab color="accent">
+          <md-icon>delete forever</md-icon>
+        </button>
+      </md-card-actions>
+    </md-card>
+  </div>
+
+  <div class="add-button-container">
+    <button md-fab color="primary">
+      <md-icon>add</md-icon>
+    </button>
+  </div>
+</div>
