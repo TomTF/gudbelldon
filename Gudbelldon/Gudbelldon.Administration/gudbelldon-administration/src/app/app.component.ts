@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { DataManagerService } from 'app/service';
 
 @Component({
-  selector: 'app-root',
+  selector: 'gbd-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   providers: [DataManagerService]

@@ -11,8 +11,8 @@
                 <h4 class="center-align">Strickabende im Gudbelldon</h4>
             </div>
             <h5 class="center-align">
-                Montags oder Dienstags finden ab 18:30 Uhr (genaue Termine siehe unten) Strickabende statt. <br /><br />
-                Egal ob Anfängerin oder schon ein Strick-Ass: hier darf in gemütlicher Atmosphäre dein Strickstück wachsen und ich stehe dir mit Rat und Tat zur Seite!
+                Einmal wöchentlich findet ab 18:30 Uhr im Gudbelldon Stricksalon ein Strickabend statt – dabei kannst du dein aktuelles Projekt mitbringen oder etwas Neues beginnen – ich stehe dir gerne mit Rat und Tat zur Seite!<br /><br/>
+                Einmal im Monat jedoch findet dieser Strickabend in einem Freistädter Lokal statt – diese Abende sind mit einem orangenen Stern gekennzeichnet – nimm also auch deine Freundinnen mit und wir stricken in einer großen Runde in gemütlichem Ambiente! Wo diese Strickabende stattfinden erfährst du hier oder via fb! Ich freue mich auf`s gemeinsame Stricken!
             </h5>
 
             <br />
@@ -21,11 +21,23 @@
                 @foreach (var date in Model.KnittingDates)
                 {
                     
-                    <span class="card-panel">
-                        <span class="card-title activator grey-text text-darken-4">
-                            @date.Date.ToString("ddd dd.MM.yyyy", cultureInfo)
-                        </span>
-                    </span>
+                    <div class="card" style="position: relative">
+                        @if (!string.IsNullOrEmpty(date.Icon))
+                        {
+                            <i class="material-icons card-icon" style="color:@date.Color">@date.Icon</i>
+                        }
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4" >
+                                @date.Date.ToString("ddd dd.MM.yyyy", cultureInfo)                               
+                            </span>                           
+                        </div>
+                        @if (!string.IsNullOrEmpty(date.Location))
+                        {
+                        <div class="card-reveal">
+                            <span class="grey-text text-darken-4">@date.Location</span>
+                        </div>
+                        }
+                    </div>
                 }
 
                 @if (!Model.KnittingDates.Any())

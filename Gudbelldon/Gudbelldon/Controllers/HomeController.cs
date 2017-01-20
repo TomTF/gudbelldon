@@ -33,21 +33,26 @@ namespace Gudbelldon.Controllers
                     //new EventModel(null, "Entrelac/Stricken im Flechtmuster", "Teil 2", null, new DateTime(2016,11,14), new TimeSpan(18,30,0), new TimeSpan(21,0,0)),
                     //new EventModel(null, "3. Sockennachmittag", "Fragen zur Socke von A - Z", "Du willst deinen ersten eigenen Socken stricken oder hast eine spezifische Frage mitten in der Ferse? Hier bist du richtig und bekommst hoffentlich auf alles eine Antwort und eine Tasse Kaffee :). Beitrag pro Nachmittag: € 5,-", new DateTime(2016,11,18), new TimeSpan(15,0,0), null),
                     //new EventModel("Content/Images/Events/20161122.png", "Strickerisch für Anfänger", null, null, new DateTime(2016,11,22), new TimeSpan(18,30,0), new TimeSpan(21,0,0)),
-                    new Event(null, "Glücksbringer häkeln/Amigurumi", null, null, new DateTime(2016,12,29), new TimeSpan(8,30,0), new TimeSpan(11,30,0)),
-                    new Event("Content/Images/Events/filzpatschen.jpg", "Filzpatschenkurs!", null, null, new DateTime(2016,12,5), new TimeSpan(18,30,0), null),
-                    new Event("Content/Images/Events/haube.jpg", "Strick deine Haube!", null, null, new DateTime(2016,12,12), new TimeSpan(18,30,0), null),
-                    new Event("Content/Images/Events/Child.jpg", "Mama-Kinder-Kurs", "Armstricken mit Alpaka-Merino-Wolle", null, new DateTime(2017,1,3), new TimeSpan(9,0,0), new TimeSpan(11,0,0)),
+                    //new Event(null, "Glücksbringer häkeln/Amigurumi", null, null, new DateTime(2016,12,29), new TimeSpan(8,30,0), new TimeSpan(11,30,0)),
+                    //new Event("Content/Images/Events/filzpatschen.jpg", "Filzpatschenkurs!", null, null, new DateTime(2016,12,5), new TimeSpan(18,30,0), null),
+                    //new Event("Content/Images/Events/haube.jpg", "Strick deine Haube!", null, null, new DateTime(2016,12,12), new TimeSpan(18,30,0), null),
+                    //new Event("Content/Images/Events/Child.jpg", "Mama-Kinder-Kurs", "Armstricken mit Alpaka-Merino-Wolle", null, new DateTime(2017,1,3), new TimeSpan(9,0,0), new TimeSpan(11,0,0)),
+                    new Event(null, "Französische Handschuhe stricken", "Teil 1", null, new DateTime(2017,1,16), new TimeSpan(18,30,0), null),
+                    new Event(null, "Französische Handschuhe stricken", "Teil 2", null, new DateTime(2017,1,23), new TimeSpan(18,30,0), null),
+                    new Event(null, "Französische Handschuhe stricken", "Teil 3", null, new DateTime(2017,1,30), new TimeSpan(18,30,0), null),
+                    new Event(null, "Sockennachmittag", "Fragen zur Socke von A - Z", "Jeweils ab 15 Uhr werden alle Fragen zum Thema Sockenstricken beantwortet und es kann in gemütlicher Runde gestrickt werden! Kursbeitrag: € 5,-", new DateTime(2017,01,27), new TimeSpan(15,0,0), null),
+
                 }.Where(e => e.Date > DateTime.Now.AddDays(-1)).OrderBy(e => e.Date),
                 KnittingDates = new List<KnittingNight> {
                     new KnittingNight(new DateTime(2016,11,21)),
                     new KnittingNight(new DateTime(2016,11,28)),
                     new KnittingNight(new DateTime(2016,12,13)),
                     new KnittingNight(new DateTime(2017,1,10)),
-                    new KnittingNight(new DateTime(2017,1,17)),
+                    new KnittingNight(new DateTime(2017,1,17), "grade", "#eea159", "Freistädter Brauhaus "),
                     new KnittingNight(new DateTime(2017,1,24)),
                     new KnittingNight(new DateTime(2017,1,31)),
                     new KnittingNight(new DateTime(2017,2,7)),
-                    new KnittingNight(new DateTime(2017,2,14)),
+                    new KnittingNight(new DateTime(2017,2,15), "grade", "#eea159", "Cafe Konditorei Poissl"),
                     new KnittingNight(new DateTime(2017,2,28))
                 }.OrderBy(d => d.Date)
             };

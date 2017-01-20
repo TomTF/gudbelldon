@@ -16,4 +16,8 @@ export class DataManagerService {
   public loadEvents(): Observable<EventDto[]> {
     return this.httpService.get(this.baseUrl + 'api/events').map(e => e.json());
   }
+
+  public saveOrUpdateEvent(event: EventDto): Observable<EventDto> {
+    return this.httpService.post(this.baseUrl + 'api/events', event).map(e => e.json());
+  }
 }

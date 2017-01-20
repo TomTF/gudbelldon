@@ -8,19 +8,21 @@ import { MaterialModule } from '@angular/material';
 import { AppComponent } from './app.component';
 import { EventsComponent } from './events/events.component';
 import { KnittingComponent } from './knitting/knitting.component';
+import { EventComponent } from './events/event/event.component';
 
 
 const appRoutes: Routes = [
   { path: '', component: EventsComponent },
   { path: 'events', component: EventsComponent },
   { path: 'knitting', component: KnittingComponent }
-]
+];
 
 @NgModule({
   declarations: [
     AppComponent,
     EventsComponent,
-    KnittingComponent
+    KnittingComponent,
+    EventComponent
   ],
   imports: [
     BrowserModule,

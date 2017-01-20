@@ -123,6 +123,17 @@ span.card-panel {
   margin-bottom: 0;
   margin-top: 35px;
 }
+#events .card {
+  position: relative;
+  overflow: visible;
+  display: inline-block;
+}
+#events .card-icon {
+  position: absolute;
+  top: -15px;
+  left: -11px;
+  font-size: 33px;
+}
 #gallery {
   background: rgba(98, 193, 201, 0.3);
 }
