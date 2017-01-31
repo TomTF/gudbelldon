@@ -18,7 +18,7 @@
             <br />
 
             <div class="center-align">
-                @foreach (var date in Model.KnittingDates)
+                @foreach (var date in Model.KnittingDates.OrderBy(d => d.Date).Take(20))
                 {
                     
                     <div class="card" style="position: relative">

@@ -18,4 +18,8 @@ export class EventsComponent implements OnInit {
       this.events = events;
     });
   }
+
+  public addNewEvent() {
+    this.events.push({});
+  }
 }

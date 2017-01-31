@@ -63,6 +63,10 @@
     <Compile Include="Migrations\201611252202003_Events.Designer.cs">
       <DependentUpon>201611252202003_Events.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201701201911007_ExtendKnittingNight.cs" />
+    <Compile Include="Migrations\201701201911007_ExtendKnittingNight.Designer.cs">
+      <DependentUpon>201701201911007_ExtendKnittingNight.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Event.cs" />
     <Compile Include="Model\KnittingNight.cs" />
@@ -83,6 +87,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201611252202003_Events.resx">
       <DependentUpon>201611252202003_Events.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701201911007_ExtendKnittingNight.resx">
+      <DependentUpon>201701201911007_ExtendKnittingNight.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
