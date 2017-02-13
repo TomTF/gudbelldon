@@ -96,7 +96,7 @@ namespace Gudbelldon.Controllers
                     new KnittingNight(new DateTime(2017,11,28)),
                     new KnittingNight(new DateTime(2017,12,5)),
                     new KnittingNight(new DateTime(2017,12,12), "grade", "#eea159", null),
-                }.OrderBy(d => d.Date)
+                }.Where(e => e.Date > DateTime.Now.AddDays(-1)).OrderBy(d => d.Date)
             };
             return View(model);
         }
