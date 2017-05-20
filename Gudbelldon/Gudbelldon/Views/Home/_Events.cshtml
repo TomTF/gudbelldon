@@ -20,24 +20,32 @@
             <div class="center-align">
                 @foreach (var date in Model.KnittingDates.OrderBy(d => d.Date).Take(20))
                 {
-                    
-                    <div class="card" style="position: relative">
-                        @if (!string.IsNullOrEmpty(date.Icon))
-                        {
-                            <i class="material-icons card-icon" style="color:@date.Color">@date.Icon</i>
-                        }
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4" >
-                                @date.Date.ToString("ddd dd.MM.yyyy", cultureInfo)                               
-                            </span>                           
+                    if (date.SeperatorText != null)
+                    {
+                        <h5 style="color: rgba(0,0,0,0.3)">
+                            @date.SeperatorText
+                        </h5>
+                    }
+                    else
+                    {
+                        <div class="card" style="position: relative">
+                            @if (!string.IsNullOrEmpty(date.Icon))
+                            {
+                                <i class="material-icons card-icon" style="color:@date.Color">@date.Icon</i>
+                            }
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4" >
+                                    @date.Date.ToString("ddd dd.MM.yyyy", cultureInfo)                               
+                                </span>                           
+                            </div>
+                            @if (!string.IsNullOrEmpty(date.Location))
+                            {
+                            <div class="card-reveal">
+                                <span class="grey-text text-darken-4">@date.Location</span>
+                            </div>
+                            }
                         </div>
-                        @if (!string.IsNullOrEmpty(date.Location))
-                        {
-                        <div class="card-reveal">
-                            <span class="grey-text text-darken-4">@date.Location</span>
-                        </div>
-                        }
-                    </div>
+                    }
                 }
 
                 @if (!Model.KnittingDates.Any())

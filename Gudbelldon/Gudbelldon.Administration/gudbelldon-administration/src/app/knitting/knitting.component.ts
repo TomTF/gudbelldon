@@ -10,6 +10,7 @@ export class KnittingComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }

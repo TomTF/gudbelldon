@@ -8,11 +8,14 @@ namespace Gudbelldon.Data.Model
 {
     public class KnittingNight
     {
+        private string v;
+
         public int KnittingNightId { get; set; }
         public DateTime Date { get; set; }
         public string Icon { get; set; }
         public string Color { get; set; }
         public string Location { get; set; }
+        public string SeperatorText { get; set; }
 
         public KnittingNight()
         {
@@ -30,6 +33,12 @@ namespace Gudbelldon.Data.Model
             this.Icon = icon;
             this.Color = color;
             this.Location = location;
+        }
+
+        public KnittingNight(DateTime date, string seperatorText)
+        {
+            this.Date = date;
+            this.SeperatorText = seperatorText;
         }
     }
 }
